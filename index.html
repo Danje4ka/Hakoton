@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Study site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1> Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#planner">Tasks</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#collection">My collection</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="planner">
+        <h2>Tasks</h2>
+        <form>
+            <label for="task">Tasks:</label>
+            <input type="text" id="task" name="task">
+            <label for="dayOfWeek">Day of the week:</label>
+            <select id="dayOfWeek" name="dayOfWeek">
+                <option value="Понедельник">Monday</option>
+                <option value="Вторник">Tuesday</option>
+                <option value="Среда">Wednesday</option>
+                <option value="Четверг">Thursday</option>
+                <option value="Пятница">Friday</option>
+                <option value="Суббота">Saturday</option>
+                <option value="Воскресенье">Sunday</option>
+            </select>
+            <button type="submit"><Address>Add</Address></button>
+        </form>
+        <ul id="taskList">
+            <!-- Tasks will be added here -->
+        </ul>
+    </section>
+
+    <section id="store">
+        <h2>Store</h2>
+        <button id="buyItem">Buy a new item</button>
+        <ul id="storeItems">
+            <!-- Items from the store will be displayed here -->
+        </ul>
+    </section>
+
+    <section id="collection">
+        <h2>My collection</h2>
+        <ul id="collectionItems">
+            <!-- Items in the collection will be displayed here -->
+        </ul>
+    </section>
+
+    <section id="completedTasks">
+        <h2>Completed tasks</h2>
+        <ul id="completedList">
+            <!-- Completed tasks will be moved here -->
+        </ul>
+    </section>
+
+    <div id="score">
+        <h2>Your score: <span id="userScore">0</span></h2>
+    </div>
+
+    <button id="myButton">Chat</button>
+
+    <script>
+       
+        var button = document.getElementById("myButton");
+
+       
+        button.addEventListener("click", function() {
+            alert("You are currently in a chat");
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
